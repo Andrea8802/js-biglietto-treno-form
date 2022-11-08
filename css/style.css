@@ -68,3 +68,39 @@ h1{
     font-weight: bold;
     margin: 0 10px
     }
+
+.output-cont{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+    .output{
+        border: 1px solid black;
+        display: flex;
+        height: 170px;
+    }
+
+    .name{
+        width: 30%;
+        background-color: gray;
+        height: 100%;
+        padding: 35px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .info{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .info .title{
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
