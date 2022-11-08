@@ -1,11 +1,6 @@
 // Calcolo prezzo biglietto del viaggio in base all'età e ai km da percorrere 2.0
 
 // Dichiarazioni variabili
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0f9ef22bc4ab515542758a4a8f8ab0e8ff1dfea8
 const prezzoAlKm = 0.21;
 let prezzoViaggio;
 let sconto;
@@ -32,15 +27,11 @@ genera.addEventListener("click",
         const etaInput = document.getElementById("etaInput");
         const fasciaEta = etaInput.value;
 
-<<<<<<< HEAD
         // Rendiamo visibile blocco output
         blockOutput.classList.remove("d-none");
 
         if(nomeCognome != "" || kmViaggio != ""){
             // Moltiplicare km X 0.21€
-=======
-        // Moltiplicare km X 0.21€
->>>>>>> 0f9ef22bc4ab515542758a4a8f8ab0e8ff1dfea8
         prezzoViaggio = prezzoAlKm * kmViaggio;
 
         // Se è minorenne sconto del 20%
@@ -53,7 +44,6 @@ genera.addEventListener("click",
             sconto = prezzoViaggio * 0.40;
             prezzoViaggio -= sconto;
             console.log(prezzoViaggio)
-<<<<<<< HEAD
         }
 
         // Output
@@ -71,15 +61,6 @@ genera.addEventListener("click",
         document.getElementById("codiceCP").innerHTML = "92911";
 
         // Prezzo finale (massimo 2 decimali)
-=======
-
-
-        }
-
-        // Inserimento nome passeggero
-        document.getElementById("nomePasseggero").innerHTML = nomeCognome;
-        // Output del prezzo finale (massimo 2 decimali)
->>>>>>> 0f9ef22bc4ab515542758a4a8f8ab0e8ff1dfea8
         document.getElementById("costoBiglietto").innerHTML = prezzoViaggio.toFixed(2) + "€";
 
         // Pulizia input

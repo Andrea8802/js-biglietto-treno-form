@@ -67,19 +67,10 @@ h3{
         font-size: 20px;
     }
 
-<<<<<<< HEAD
     input:focus{
         outline: none;
         border: 3px solid var(--primary-color);
     }
-=======
-        .input > input, .input > select{
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
-            padding: 4px 0;
-            background-color: white;
-        }
->>>>>>> 0f9ef22bc4ab515542758a4a8f8ab0e8ff1dfea8
 
 .buttons{
     text-align: center;
