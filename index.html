@@ -4,17 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Boolean Train</title>
 </head>
 <body>
-    <input type="text" id="nome" placeholder="Inserisci Nome e Cognome">
-    <input type="text" id="km" placeholder="Inserisci i km da percorrere">
-    <select name="fasciaEta" id="fasciaEta">
-        <option value="maggiorenne">Maggiorenne</option>
-        <option value="minorenne">Minorenne</option>
-        <option value="over65">Over65</option>
-    </select>
-    <button>Genera</button>
-    <button>Annulla</button>
+
+    <main>
+        <h1>
+            CALCOLA IL PREZZO DEL TUO BIGLIETTO
+        </h1>
+        <section class="input-cont">
+            <div class="labels">
+                <label for="nome">
+                    Nome e Cognome
+                </label>
+
+                <label for="km">
+                    km da percorrere
+                </label>
+
+                <label for="eta">
+                    Fascia d'età
+                </label>
+            </div>
+            <div class="input">
+                <input type="text" id="nomeInput">
+            
+                <input type="text" id="kmInput">
+               
+                <select name="fasciaEta" id="etaInput">
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over65</option>
+                </select>
+                <button id="genera">Genera</button>
+                <button id="annulla">Annulla</button>
+            </section>
+            </div>   
+    </main>
+    
+    
+
+    <h1 id="prezzo">
+
+    </h1>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

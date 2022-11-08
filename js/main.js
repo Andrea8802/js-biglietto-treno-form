@@ -1,29 +1,65 @@
-// Calcolo prezzo biglietto del viaggio in base all'età e ai km da percorrere.
+// Calcolo prezzo biglietto del viaggio in base all'età e ai km da percorrere 2.0
 
 // Dichiarazioni variabili
-let kmViaggio
-let etaPasseggero
-const prezzoAlKm = 0.21
-let prezzoViaggio
+const nomeInput = document.getElementById("nomeInput");
+const nomeCognome = nomeInput.value;
 
-// Chiedere quanti km vuole percorrere
-kmViaggio = prompt("Quanti km vuoi percorrere?");
+const kmInput = document.getElementById("kmInput");
+const kmViaggio = kmInput.value;
 
-// Chiedere età passeggero
-etaPasseggero = prompt("Quanti anni hai?");
+const etaInput = document.getElementById("etaInput");
+const fasciaEta = etaInput.value;
 
-// Moltiplicare km X 0.21€
-prezzoViaggio = prezzoAlKm * kmViaggio;
+const prezzoAlKm = 0.21;
+let prezzoViaggio;
+let sconto;
 
-// Applichiamo sconti se idonei
+const genera = document.querySelector("#genera");
+const annulla = document.querySelector("#annulla");
 
-// Se è minorenne sconto del 20%
-if(etaPasseggero < 18){
-    prezzoViaggio *= 0.20;
+// Pulizia input iniziale
+        nomeInput.value = null;
+        kmInput.value = null;
+        etaInput.value = null;
 
-} else if (etaPasseggero >= 65){// Altrimenti se è over65 sconto del 40%
-    prezzoViaggio *= 0.40;
-}
+// Bottone "Genera"
+genera.addEventListener("click",
+    function() {
+        // Moltiplicare km X 0.21€
+        prezzoViaggio = prezzoAlKm * kmViaggio;
 
-// Output del prezzo finale (massimo 2 decimali)
-document.getElementById("prezzo").innerHTML = `Il prezzo del tuo biglietto è di ${prezzoViaggio.toFixed(2)}€`;
+        // Se è minorenne sconto del 20%
+        if(fasciaEta === "minorenne"){
+            sconto = prezzoViaggio * 0.20;
+            prezzoViaggio -= sconto;
+
+        } else if (fasciaEta === "over65"){// Altrimenti se è over65 sconto del 40%
+            sconto = prezzoViaggio * 0.40;
+            prezzoViaggio -= sconto;
+
+        }
+
+        // Output del prezzo finale (massimo 2 decimali)
+        document.getElementById("prezzo").innerHTML = `Il prezzo del tuo biglietto è di ${prezzoViaggio.toFixed(2)}€`;  
+
+        // Pulizia input
+        nomeInput.value = null;
+        kmInput.value = null;
+        etaInput.value = null;
+    }
+)
+
+// Bottone "Cancella"
+annulla.addEventListener("click",
+    function() {
+        // Pulizia input
+        nomeInput.value = null;
+        kmInput.value = null;
+        etaInput.value = null;
+    }
+)
+
+
+
+
+
