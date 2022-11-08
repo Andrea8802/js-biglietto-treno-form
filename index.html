@@ -14,95 +14,99 @@
             CALCOLA IL PREZZO DEL TUO BIGLIETTO
         </h2>
         <section class="input-cont">
-            <div class="labels">
-                <label for="nome">
-                    Nome e Cognome
-                </label>
-
-                <label for="km">
-                    Km da percorrere
-                </label>
-
-                <label for="eta">
-                    Fascia d'età
-                </label>
-            </div>
-            <div class="input">
-                <input type="text" id="nomeInput">
+            <form action="#" id="form">
+                <div>
+                    <label for="nome" class="labels">
+                        Nome e Cognome
+                    </label>
+    
+                    <input type="text" id="nomeInput" class="input">
+                </div>
+    
+                <div>
+                    <label for="km" class="labels">
+                        Km da percorrere
+                    </label>
+    
+                    <input type="text" id="kmInput" class="input">
+                </div>
+                
+                <div>
+                    <label for="eta" class="labels">
+                        Fascia d'età
+                    </label>
+    
+                    <select name="fasciaEta" id="etaInput" class="input">
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="over65">Over65</option>
+                    </select>
+                </div>
+            </form>
             
-                <input type="text" id="kmInput">
-               
-                <select name="fasciaEta" id="etaInput">
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="minorenne">Minorenne</option>
-                    <option value="over65">Over65</option>
-                </select>
-            </div>
-
             <div class="buttons">
                 <button id="genera">Genera</button>
                 <button id="annulla">Annulla</button>
             </div> 
             </section>
 
-            <h2>
-                IL TUO BIGLIETTO
-            </h2>
-
-            <section class="output-cont"> 
-                <h3>
-                    DETTAGLIO PASSEGGERI
-                </h3>
-                <div class="output">
-                    <div class="name">
-                        <div>
-                            NOME PASSEGGERO
-                        </div>
-                    <div id="nomePasseggero"></div>
-                </div>
-
-
-                    <div class="info">
-                        <div>
-                            <div class="title">
-                                Offerta
+            <section class="outputBlock d-none">
+                <h2>
+                    IL TUO BIGLIETTO
+                </h2>
+    
+                <div class="output-cont"> 
+                    <h3>
+                        DETTAGLIO PASSEGGERI
+                    </h3>
+                    <div class="output">
+                        <div class="name">
+                            <div>
+                                NOME PASSEGGERO
                             </div>
-                            <div id="offerta">Biglietto Standard</div>
-                        </div>
-
-                        <div>
-                           <div class="title">
-                            Carrozza
-                           </div> 
-
-                           <div id="nCarrozza">
-                            5
-                           </div>
-
-                        </div>
-
-                        <div>
-                            <div class="title">
-                                Codice CP
+                        <div id="nomePasseggero"></div>
+                    </div>
+    
+    
+                        <div class="info">
+                            <div>
+                                <div class="title">
+                                    Offerta
+                                </div>
+                                <div id="offerta"></div>
                             </div>
-
-                            <div id="codiceCP">
-                                92911
+    
+                            <div>
+                               <div class="title">
+                                Carrozza
+                               </div> 
+    
+                               <div id="nCarrozza"></div>
+    
                             </div>
-
-                        </div>
-
-                        <div>
-                            <div class="title">
-                                Costo Biglietto
+    
+                            <div>
+                                <div class="title">
+                                    Codice CP
+                                </div>
+    
+                                <div id="codiceCP"></div>
+    
                             </div>
-                            
-
-                            <div id="costoBiglietto"></div>
+    
+                            <div>
+                                <div class="title">
+                                    Costo Biglietto
+                                </div>
+                                
+    
+                                <div id="costoBiglietto"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
               
     </main>
 
