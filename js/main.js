@@ -26,7 +26,7 @@ genera.addEventListener("click",
         const nomeCognome = nomeInput.value;
 
         const kmInput = document.getElementById("kmInput");
-        const kmViaggio = kmInput.value;
+        const kmViaggio = parseInt(kmInput.value);
 
         const etaInput = document.getElementById("etaInput");
         const fasciaEta = etaInput.value;
