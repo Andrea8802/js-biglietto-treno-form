@@ -43,12 +43,10 @@ genera.addEventListener("click",
             if(fasciaEta === "minorenne"){
                 sconto = prezzoViaggio * 0.20;
                 prezzoViaggio -= sconto;
-                console.log(prezzoViaggio)
 
             } else if (fasciaEta === "over65"){// Altrimenti se è over65 sconto del 40%
                 sconto = prezzoViaggio * 0.40;
                 prezzoViaggio -= sconto;
-                console.log(prezzoViaggio)
             }
 
             // Output
